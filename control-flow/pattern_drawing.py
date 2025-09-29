@@ -1,22 +1,37 @@
-while True:
-    try:  
-        size_str = input("Enter a positive integer for the square size (n): ")
-        size = int(size_str)
+# pattern_drawing.py
 
-        # To check if the integer is positive
-        if size > 0:
-            break
-        else:
-            print("Error: The size must be a positive integer greater than zero.")
-            
-    except ValueError:
-        # Catch errors if the input cannot be converted to an integer
-        print("Error: Invalid input. Please enter a whole number.")
+# --- Input Handling ---
+# Prompt User for Pattern Size
+size_str = input("Enter the size of the pattern: ")
 
-print(f"\nDrawing a {size}x{size} square pattern:")
+try:
+    size = int(size_str)
+except ValueError:
+    print("Error: Invalid input. Please enter a whole number.")
+    # Exit or handle the error appropriately
+    exit()
 
-for row in range(size):
+# Validation for positive integer (from original objective)
+if size <= 0:
+    print("Error: The size must be a positive integer.")
+    exit()
+
+# --- Pattern Drawing ---
+
+# Initialize the row counter for the while loop
+row_count = 0
+
+# 1. Use a while loop to iterate through each row of the pattern
+while row_count < size:
+    
+    # 2. Use a for loop to print asterisks for each column
     for col in range(size):
-        print("*", end=" ")
-
+        # Print asterisks side by side without advancing to a new line
+        # Using end="" as strictly requested (though end=" " might look better visually)
+        print("*", end="") 
+    
+    # 3. After completing the row, print a newline character
     print()
+    
+    # Increment the row counter to move to the next row
+    row_count += 1
