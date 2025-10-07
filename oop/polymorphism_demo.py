@@ -1,14 +1,29 @@
-class Calculator:
-    # Class Attribute
-    calculation_type = "Arithmetic Operations"
+import math
+class Shape:
+    def __init__(self):
+        pass
 
-    # Static Method
-    @staticmethod
-    def add(a, b):
-        return a + b
+    def area(self):
+        raise NotImplementedError
 
-    # Class Method
-    @classmethod
-    def multiply(cls, a, b):
-        print(f"Calculation type: {cls.calculation_type}")
-        return a * b
+
+class Rectangle(Shape):
+    def __init__(self, length, width):
+        super().__init__()
+        self.length = length
+        self.width = width
+
+    def area(self):
+        ans = self.length * self.width
+        return ans 
+        
+        
+
+class Circle(Shape):
+    def __init__(self, radius):
+        super().__init__()
+        self.radius = radius
+
+    def area(self):
+        ans = math.pi * (self.radius** 2)
+        return ans
