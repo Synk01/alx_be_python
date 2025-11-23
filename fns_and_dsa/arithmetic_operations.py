@@ -1,15 +1,17 @@
-def perform_operation(num1, num2, operation): 
-    # define operation
-    match operation :
-    case "add" :
+def perform_operation(num1, num2, operation):
+    if operation == "add":
         return num1 + num2
-    case "subtract" :
+
+    elif operation == "subtract":
         return num1 - num2
-    case "multiply":
+
+    elif operation == "multiply":
         return num1 * num2
-     case "divide":
+
+    elif operation == "divide":
         if num2 == 0:
             return "DIVISION_BY_ZERO"
         return num1 / num2
-    case _:
+
+    else:
         return "INVALID_OPERATION"
