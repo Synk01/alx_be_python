@@ -21,7 +21,8 @@ user_prompt = float(input("Enter the temperature to convert: "))
 
 # Restrict input to only C or F
 while True:
-    unit = input("Enter either C or F: ").upper()
+    unit = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").upper()
+
     if unit in ["C", "F"]:
         break
     print("Invalid input. Please enter only 'C' or 'F'.")
