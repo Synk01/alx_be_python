@@ -24,3 +24,12 @@ def calculate_future_date():
     return formated_future_date
 future_date = calculate_future_date()
 print (f"Future date: {future_date}")  
+
+def main():
+    # Display the current date and time
+    display_current_datetime()
+    # Calculate and display the future date
+    calculate_future_date()
+
+if __name__ == "__main__":
+    main()
