@@ -17,7 +17,12 @@ def convert_to_fahrenheit(celsius):
     return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
 
 # PART 3: User input
-user_prompt = float(input("Enter the temperature to convert: "))
+while True:
+    try:
+        user_prompt = float(input("Enter the temperature to convert: "))
+        break
+    except ValueError:
+        print("Invalid temperature. Please enter a numeric value.")
 
 # Restrict input to only C or F
 while True:
