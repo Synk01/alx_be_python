@@ -29,7 +29,7 @@ while True:
 # PART 4: Perform conversion
 if unit == "C":
     result = convert_to_fahrenheit(user_prompt)
-    print(f"{user_prompt}°C = {result:.2f}°F")
+    print(f"{user_prompt}°C is {result}°F")
 else:  # unit == "F"
     result = convert_to_celsius(user_prompt)
-    print(f"{user_prompt}°F = {result:.2f}°C")
+    print(f"{user_prompt}°F is {result}°C")
