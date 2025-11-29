@@ -23,11 +23,4 @@ def calculate_future_date():
     print(formated_future_date)
     return formated_future_date
 future_date = calculate_future_date()
-print (f" Future date: {future_date}")
-
-
-
-
-
-
-
+print (f"Future date: {future_date}")  
