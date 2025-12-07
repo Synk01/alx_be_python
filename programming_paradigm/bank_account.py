@@ -7,7 +7,7 @@ class BankAccount:
         self.amount = amount 
         # to add deposit to balance
         self.account_balance += amount
-        print ( f"Deposited : {amount} , balance {self.account_balance}")
+        print ( f"Deposited : {amount} ")
 
     def withdraw(self,amount):
         if amount <= 0:
@@ -16,7 +16,7 @@ class BankAccount:
         
         if self.account_balance >= amount:
             self.account_balance -= amount
-            print(f"Withdrew: ${amount:,.2f} , balance {self.account_balance}")
+            print(f"Withdrew: ${amount:}")
             return True
         else:
             print("Transaction failed: Insufficient funds.")
@@ -26,7 +26,7 @@ class BankAccount:
         """s
         Prints the current account balance in a user-friendly format.
         """
-        print(f"Current Balance: ${self.account_balance:,.2f}")
+        print(f"Current Balance: ${self.account_balance: }")
 
 
     
